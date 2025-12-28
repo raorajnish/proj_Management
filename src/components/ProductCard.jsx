@@ -1,4 +1,4 @@
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, onClick }) => {
   const { name, description, tags, assignedPeople, progress } = product;
 
   const progressColor =
@@ -9,7 +9,10 @@ const ProductCard = ({ product }) => {
         : "var(--progress-fill-low)";
 
   return (
-    <div className="card relative overflow-hidden flex h-full flex-col rounded-xl p-6">
+    <div
+      onClick={onClick}
+      className="card relative flex h-full cursor-pointer flex-col overflow-hidden rounded-xl p-6 "
+    >
       {/* Title */}
       <h2 className="font-bbh text-maintext text-xl">{name}</h2>
 
@@ -63,15 +66,17 @@ const ProductCard = ({ product }) => {
           <span className="text-subtext mt-1 text-xs">{progress}%</span>
         </div>
       </div>
+
+      {/* Bottom inset */}
       <div
         className="pointer-events-none absolute inset-x-0 bottom-0 h-0.5"
         style={{
           background: `linear-gradient(
-    to right,
-    transparent,
-    ${progressColor},
-    transparent
-  )`,
+            to right,
+            transparent,
+            ${progressColor},
+            transparent
+          )`,
         }}
       />
     </div>

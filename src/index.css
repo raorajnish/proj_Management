@@ -15,7 +15,7 @@
   --border: hsl(0 0% 60%);
   --highlight: hsl(0 0% 100%);
 
-  --border-card: solid 1px var(--color-background);
+  --border-card: solid 0px var(--color-background);
 
   --shadow:
     0px 2px 2px hsla(0, 0%, 0%, 0.07), 0px 4px 4px hsla(0, 0%, 0%, 0.15);
@@ -28,9 +28,9 @@
   );
 
    --progress-bg: hsl(0 0% 85%);
-  --progress-fill-low: hsl(0 70% 50%);
-  --progress-fill-mid: hsl(40 90% 50%);
-  --progress-fill-high: hsl(120 60% 45%);
+  --progress-fill-low: hsl(0 20% 50%);
+  --progress-fill-mid: hsl(40 20% 50%);
+  --progress-fill-high: hsl(120 20% 45%);
 }
 
 html[data-theme="dark"] {
@@ -53,9 +53,9 @@ html[data-theme="dark"] {
   );
 
   --progress-bg: hsl(0 0% 20%);
-  --progress-fill-low: hsl(0 80% 60%);
-  --progress-fill-mid: hsl(45 100% 60%);
-  --progress-fill-high: hsl(140 70% 55%);
+  --progress-fill-low: hsl(0 40% 60%);
+  --progress-fill-mid: hsl(45 40% 60%);
+  --progress-fill-high: hsl(140 40% 55%);
 }
 
 @theme inline {
@@ -114,4 +114,26 @@ body {
 
 .btn{
   box-shadow: var(--shadow);
+}
+.progress-glow {
+  box-shadow: 0 0 10px color-mix(in srgb, currentColor 40%, transparent);
+}
+.tab-underline {
+  animation: slideIn 0.18s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: scaleX(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+/* global.css */
+.upload-glow:hover {
+  box-shadow: 0 0 0 2px var(--accent);
 }

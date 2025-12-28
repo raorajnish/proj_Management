@@ -2,15 +2,85 @@
   {
     "id": "v1",
     "shotId": "sh1",
-    "label": "Shot_1.1",
-    "image": "/mock/shot1_v1.png",
+    "label": "v1",
+    "image": "https://picsum.photos/seed/sh1v1/800/600",
     "createdAt": "2025-01-01"
   },
   {
     "id": "v2",
     "shotId": "sh1",
-    "label": "Shot_1.2",
-    "image": "/mock/shot1_v2.png",
+    "label": "v2",
+    "image": "https://picsum.photos/seed/sh1v2/800/600",
     "createdAt": "2025-01-02"
+  },
+  {
+    "id": "v3",
+    "shotId": "sh1",
+    "label": "v3",
+    "image": "https://picsum.photos/seed/sh1v3/800/600",
+    "createdAt": "2025-01-03"
+  },
+  {
+    "id": "v4",
+    "shotId": "sh1",
+    "label": "Final",
+    "image": "https://picsum.photos/seed/sh1v4/800/600",
+    "createdAt": "2025-01-04"
+  },
+  {
+    "id": "v5",
+    "shotId": "sh2",
+    "label": "v1",
+    "image": "https://picsum.photos/seed/sh2v1/800/600",
+    "createdAt": "2025-01-05"
+  },
+  {
+    "id": "v6",
+    "shotId": "sh2",
+    "label": "v2",
+    "image": "https://picsum.photos/seed/sh2v2/800/600",
+    "createdAt": "2025-01-06"
+  },
+  {
+    "id": "v7",
+    "shotId": "sh2",
+    "label": "v3",
+    "image": "https://picsum.photos/seed/sh2v3/800/600",
+    "createdAt": "2025-01-06"
+  },
+  {
+    "id": "v8",
+    "shotId": "sh2",
+    "label": "Final",
+    "image": "https://picsum.photos/seed/sh2v4/800/600",
+    "createdAt": "2025-01-07"
+  },
+  {
+    "id": "v9",
+    "shotId": "sh3",
+    "label": "Rough",
+    "image": "https://picsum.photos/seed/sh3v1/800/600",
+    "createdAt": "2025-01-08"
+  },
+  {
+    "id": "v10",
+    "shotId": "sh3",
+    "label": "v2",
+    "image": "https://picsum.photos/seed/sh3v2/800/600",
+    "createdAt": "2025-01-09"
+  },
+  {
+    "id": "v11",
+    "shotId": "sh3",
+    "label": "v3",
+    "image": "https://picsum.photos/seed/sh3v3/800/600",
+    "createdAt": "2025-01-10"
+  },
+  {
+    "id": "v12",
+    "shotId": "sh3",
+    "label": "Polished",
+    "image": "https://picsum.photos/seed/sh3v4/800/600",
+    "createdAt": "2025-01-11"
   }
 ]

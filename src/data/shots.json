@@ -2,22 +2,1161 @@
   {
     "id": "sh1",
     "sceneId": "s1",
-    "name": "Wide Establishing",
-    "approval": "Partial",
-    "assignedTo": "Aarav"
+    "name": "Stealth Tracking Shot",
+    "approval": "Not Given",
+    "assignedTo": "Meera",
+    "image": "https://picsum.photos/seed/sh1/600/400"
   },
   {
     "id": "sh2",
     "sceneId": "s1",
-    "name": "Close Up",
-    "approval": "Rejected",
-    "assignedTo": "Neha"
+    "name": "Action Over The Shoulder",
+    "approval": "Not Given",
+    "assignedTo": "Nisha",
+    "image": "https://picsum.photos/seed/sh2/600/400"
   },
   {
     "id": "sh3",
-    "sceneId": "s2",
-    "name": "Slow Motion Entry",
+    "sceneId": "s1",
+    "name": "Action Dutch Angle",
     "approval": "Accepted",
-    "assignedTo": "Aarav"
+    "assignedTo": "Riya",
+    "image": "https://picsum.photos/seed/sh3/600/400"
+  },
+  {
+    "id": "sh4",
+    "sceneId": "s1",
+    "name": "Action Wide Establishing",
+    "approval": "Not Given",
+    "assignedTo": "Sarah",
+    "image": "https://picsum.photos/seed/sh4/600/400"
+  },
+  {
+    "id": "sh5",
+    "sceneId": "s1",
+    "name": "Dark Over The Shoulder",
+    "approval": "Partial",
+    "assignedTo": "Arjun",
+    "image": "https://picsum.photos/seed/sh5/600/400"
+  },
+  {
+    "id": "sh6",
+    "sceneId": "s2",
+    "name": "Stealth Close Up",
+    "approval": "Not Given",
+    "assignedTo": "Aarav",
+    "image": "https://picsum.photos/seed/sh6/600/400"
+  },
+  {
+    "id": "sh7",
+    "sceneId": "s2",
+    "name": "Action Insert Shot",
+    "approval": "Rejected",
+    "assignedTo": "Tara",
+    "image": "https://picsum.photos/seed/sh7/600/400"
+  },
+  {
+    "id": "sh8",
+    "sceneId": "s2",
+    "name": "Dark Dutch Angle",
+    "approval": "Partial",
+    "assignedTo": "Dev",
+    "image": "https://picsum.photos/seed/sh8/600/400"
+  },
+  {
+    "id": "sh9",
+    "sceneId": "s2",
+    "name": "Stealth Birds Eye",
+    "approval": "Not Given",
+    "assignedTo": "Aarav",
+    "image": "https://picsum.photos/seed/sh9/600/400"
+  },
+  {
+    "id": "sh10",
+    "sceneId": "s2",
+    "name": "Dark POV",
+    "approval": "Not Given",
+    "assignedTo": "Sarah",
+    "image": "https://picsum.photos/seed/sh10/600/400"
+  },
+  {
+    "id": "sh11",
+    "sceneId": "s3",
+    "name": "Stealth Low Angle",
+    "approval": "Rejected",
+    "assignedTo": "Priya",
+    "image": "https://picsum.photos/seed/sh11/600/400"
+  },
+  {
+    "id": "sh12",
+    "sceneId": "s3",
+    "name": "Action Close Up",
+    "approval": "Rejected",
+    "assignedTo": "Rohan",
+    "image": "https://picsum.photos/seed/sh12/600/400"
+  },
+  {
+    "id": "sh13",
+    "sceneId": "s3",
+    "name": "Dark Insert Shot",
+    "approval": "Partial",
+    "assignedTo": "Ishaan",
+    "image": "https://picsum.photos/seed/sh13/600/400"
+  },
+  {
+    "id": "sh14",
+    "sceneId": "s3",
+    "name": "Stealth Medium Shot",
+    "approval": "Not Given",
+    "assignedTo": "Kabir",
+    "image": "https://picsum.photos/seed/sh14/600/400"
+  },
+  {
+    "id": "sh15",
+    "sceneId": "s3",
+    "name": "Action Wide Establishing",
+    "approval": "Accepted",
+    "assignedTo": "Aditya",
+    "image": "https://picsum.photos/seed/sh15/600/400"
+  },
+  {
+    "id": "sh16",
+    "sceneId": "s4",
+    "name": "Dark Dutch Angle",
+    "approval": "Partial",
+    "assignedTo": "Riya",
+    "image": "https://picsum.photos/seed/sh16/600/400"
+  },
+  {
+    "id": "sh17",
+    "sceneId": "s4",
+    "name": "Stealth Over The Shoulder",
+    "approval": "Partial",
+    "assignedTo": "Meera",
+    "image": "https://picsum.photos/seed/sh17/600/400"
+  },
+  {
+    "id": "sh18",
+    "sceneId": "s4",
+    "name": "Dark Close Up",
+    "approval": "Accepted",
+    "assignedTo": "Nisha",
+    "image": "https://picsum.photos/seed/sh18/600/400"
+  },
+  {
+    "id": "sh19",
+    "sceneId": "s4",
+    "name": "Dark Insert Shot",
+    "approval": "Partial",
+    "assignedTo": "Vikram",
+    "image": "https://picsum.photos/seed/sh19/600/400"
+  },
+  {
+    "id": "sh20",
+    "sceneId": "s4",
+    "name": "Action Medium Shot",
+    "approval": "Partial",
+    "assignedTo": "Neha",
+    "image": "https://picsum.photos/seed/sh20/600/400"
+  },
+  {
+    "id": "sh21",
+    "sceneId": "s5",
+    "name": "Action Insert Shot",
+    "approval": "Accepted",
+    "assignedTo": "Dev",
+    "image": "https://picsum.photos/seed/sh21/600/400"
+  },
+  {
+    "id": "sh22",
+    "sceneId": "s5",
+    "name": "Action Close Up",
+    "approval": "Rejected",
+    "assignedTo": "Arjun",
+    "image": "https://picsum.photos/seed/sh22/600/400"
+  },
+  {
+    "id": "sh23",
+    "sceneId": "s5",
+    "name": "Dark Low Angle",
+    "approval": "Partial",
+    "assignedTo": "Kiran",
+    "image": "https://picsum.photos/seed/sh23/600/400"
+  },
+  {
+    "id": "sh24",
+    "sceneId": "s5",
+    "name": "Action Insert Shot",
+    "approval": "Partial",
+    "assignedTo": "Arjun",
+    "image": "https://picsum.photos/seed/sh24/600/400"
+  },
+  {
+    "id": "sh25",
+    "sceneId": "s5",
+    "name": "Action Over The Shoulder",
+    "approval": "Accepted",
+    "assignedTo": "Aarav",
+    "image": "https://picsum.photos/seed/sh25/600/400"
+  },
+  {
+    "id": "sh26",
+    "sceneId": "s6",
+    "name": "Zoom Tracking Shot",
+    "approval": "Accepted",
+    "assignedTo": "Vikram",
+    "image": "https://picsum.photos/seed/sh26/600/400"
+  },
+  {
+    "id": "sh27",
+    "sceneId": "s6",
+    "name": "Zoom Wide Establishing",
+    "approval": "Rejected",
+    "assignedTo": "Tara",
+    "image": "https://picsum.photos/seed/sh27/600/400"
+  },
+  {
+    "id": "sh28",
+    "sceneId": "s6",
+    "name": "Nature Close Up",
+    "approval": "Partial",
+    "assignedTo": "Nisha",
+    "image": "https://picsum.photos/seed/sh28/600/400"
+  },
+  {
+    "id": "sh29",
+    "sceneId": "s6",
+    "name": "Nature Dutch Angle",
+    "approval": "Rejected",
+    "assignedTo": "Aarav",
+    "image": "https://picsum.photos/seed/sh29/600/400"
+  },
+  {
+    "id": "sh30",
+    "sceneId": "s6",
+    "name": "Aerial Over The Shoulder",
+    "approval": "Not Given",
+    "assignedTo": "Nisha",
+    "image": "https://picsum.photos/seed/sh30/600/400"
+  },
+  {
+    "id": "sh31",
+    "sceneId": "s7",
+    "name": "Aerial Birds Eye",
+    "approval": "Not Given",
+    "assignedTo": "Aditya",
+    "image": "https://picsum.photos/seed/sh31/600/400"
+  },
+  {
+    "id": "sh32",
+    "sceneId": "s7",
+    "name": "Zoom POV",
+    "approval": "Rejected",
+    "assignedTo": "Aditya",
+    "image": "https://picsum.photos/seed/sh32/600/400"
+  },
+  {
+    "id": "sh33",
+    "sceneId": "s7",
+    "name": "Aerial Close Up",
+    "approval": "Not Given",
+    "assignedTo": "Ishaan",
+    "image": "https://picsum.photos/seed/sh33/600/400"
+  },
+  {
+    "id": "sh34",
+    "sceneId": "s7",
+    "name": "Aerial Insert Shot",
+    "approval": "Partial",
+    "assignedTo": "Neha",
+    "image": "https://picsum.photos/seed/sh34/600/400"
+  },
+  {
+    "id": "sh35",
+    "sceneId": "s7",
+    "name": "Zoom Dutch Angle",
+    "approval": "Not Given",
+    "assignedTo": "Aarav",
+    "image": "https://picsum.photos/seed/sh35/600/400"
+  },
+  {
+    "id": "sh36",
+    "sceneId": "s8",
+    "name": "Zoom POV",
+    "approval": "Not Given",
+    "assignedTo": "Arjun",
+    "image": "https://picsum.photos/seed/sh36/600/400"
+  },
+  {
+    "id": "sh37",
+    "sceneId": "s8",
+    "name": "Aerial Close Up",
+    "approval": "Accepted",
+    "assignedTo": "Kabir",
+    "image": "https://picsum.photos/seed/sh37/600/400"
+  },
+  {
+    "id": "sh38",
+    "sceneId": "s8",
+    "name": "Zoom POV",
+    "approval": "Not Given",
+    "assignedTo": "Dev",
+    "image": "https://picsum.photos/seed/sh38/600/400"
+  },
+  {
+    "id": "sh39",
+    "sceneId": "s8",
+    "name": "Zoom Tracking Shot",
+    "approval": "Partial",
+    "assignedTo": "Kiran",
+    "image": "https://picsum.photos/seed/sh39/600/400"
+  },
+  {
+    "id": "sh40",
+    "sceneId": "s8",
+    "name": "Aerial Over The Shoulder",
+    "approval": "Rejected",
+    "assignedTo": "Meera",
+    "image": "https://picsum.photos/seed/sh40/600/400"
+  },
+  {
+    "id": "sh41",
+    "sceneId": "s9",
+    "name": "Zoom Over The Shoulder",
+    "approval": "Rejected",
+    "assignedTo": "Arjun",
+    "image": "https://picsum.photos/seed/sh41/600/400"
+  },
+  {
+    "id": "sh42",
+    "sceneId": "s9",
+    "name": "Aerial Over The Shoulder",
+    "approval": "Partial",
+    "assignedTo": "Priya",
+    "image": "https://picsum.photos/seed/sh42/600/400"
+  },
+  {
+    "id": "sh43",
+    "sceneId": "s9",
+    "name": "Zoom Dutch Angle",
+    "approval": "Not Given",
+    "assignedTo": "Tara",
+    "image": "https://picsum.photos/seed/sh43/600/400"
+  },
+  {
+    "id": "sh44",
+    "sceneId": "s9",
+    "name": "Aerial Dutch Angle",
+    "approval": "Rejected",
+    "assignedTo": "Rohan",
+    "image": "https://picsum.photos/seed/sh44/600/400"
+  },
+  {
+    "id": "sh45",
+    "sceneId": "s9",
+    "name": "Nature Tracking Shot",
+    "approval": "Rejected",
+    "assignedTo": "Zoya",
+    "image": "https://picsum.photos/seed/sh45/600/400"
+  },
+  {
+    "id": "sh46",
+    "sceneId": "s10",
+    "name": "Zoom Birds Eye",
+    "approval": "Not Given",
+    "assignedTo": "Vikram",
+    "image": "https://picsum.photos/seed/sh46/600/400"
+  },
+  {
+    "id": "sh47",
+    "sceneId": "s10",
+    "name": "Nature Tracking Shot",
+    "approval": "Partial",
+    "assignedTo": "Zoya",
+    "image": "https://picsum.photos/seed/sh47/600/400"
+  },
+  {
+    "id": "sh48",
+    "sceneId": "s10",
+    "name": "Zoom Over The Shoulder",
+    "approval": "Not Given",
+    "assignedTo": "Sarah",
+    "image": "https://picsum.photos/seed/sh48/600/400"
+  },
+  {
+    "id": "sh49",
+    "sceneId": "s10",
+    "name": "Nature Close Up",
+    "approval": "Accepted",
+    "assignedTo": "Arjun",
+    "image": "https://picsum.photos/seed/sh49/600/400"
+  },
+  {
+    "id": "sh50",
+    "sceneId": "s10",
+    "name": "Zoom Close Up",
+    "approval": "Rejected",
+    "assignedTo": "Vikram",
+    "image": "https://picsum.photos/seed/sh50/600/400"
+  },
+  {
+    "id": "sh51",
+    "sceneId": "s11",
+    "name": "Space POV",
+    "approval": "Rejected",
+    "assignedTo": "Vikram",
+    "image": "https://picsum.photos/seed/sh51/600/400"
+  },
+  {
+    "id": "sh52",
+    "sceneId": "s11",
+    "name": "Tech Medium Shot",
+    "approval": "Not Given",
+    "assignedTo": "Sarah",
+    "image": "https://picsum.photos/seed/sh52/600/400"
+  },
+  {
+    "id": "sh53",
+    "sceneId": "s11",
+    "name": "Space Close Up",
+    "approval": "Partial",
+    "assignedTo": "Neha",
+    "image": "https://picsum.photos/seed/sh53/600/400"
+  },
+  {
+    "id": "sh54",
+    "sceneId": "s11",
+    "name": "VFX Low Angle",
+    "approval": "Accepted",
+    "assignedTo": "Dev",
+    "image": "https://picsum.photos/seed/sh54/600/400"
+  },
+  {
+    "id": "sh55",
+    "sceneId": "s11",
+    "name": "Space Tracking Shot",
+    "approval": "Partial",
+    "assignedTo": "Meera",
+    "image": "https://picsum.photos/seed/sh55/600/400"
+  },
+  {
+    "id": "sh56",
+    "sceneId": "s12",
+    "name": "Space Birds Eye",
+    "approval": "Rejected",
+    "assignedTo": "Priya",
+    "image": "https://picsum.photos/seed/sh56/600/400"
+  },
+  {
+    "id": "sh57",
+    "sceneId": "s12",
+    "name": "Tech Low Angle",
+    "approval": "Not Given",
+    "assignedTo": "Dev",
+    "image": "https://picsum.photos/seed/sh57/600/400"
+  },
+  {
+    "id": "sh58",
+    "sceneId": "s12",
+    "name": "Tech Medium Shot",
+    "approval": "Not Given",
+    "assignedTo": "Priya",
+    "image": "https://picsum.photos/seed/sh58/600/400"
+  },
+  {
+    "id": "sh59",
+    "sceneId": "s12",
+    "name": "Space Over The Shoulder",
+    "approval": "Not Given",
+    "assignedTo": "Tara",
+    "image": "https://picsum.photos/seed/sh59/600/400"
+  },
+  {
+    "id": "sh60",
+    "sceneId": "s12",
+    "name": "VFX Close Up",
+    "approval": "Rejected",
+    "assignedTo": "Sarah",
+    "image": "https://picsum.photos/seed/sh60/600/400"
+  },
+  {
+    "id": "sh61",
+    "sceneId": "s13",
+    "name": "VFX Wide Establishing",
+    "approval": "Partial",
+    "assignedTo": "Kiran",
+    "image": "https://picsum.photos/seed/sh61/600/400"
+  },
+  {
+    "id": "sh62",
+    "sceneId": "s13",
+    "name": "Space Birds Eye",
+    "approval": "Not Given",
+    "assignedTo": "Aarav",
+    "image": "https://picsum.photos/seed/sh62/600/400"
+  },
+  {
+    "id": "sh63",
+    "sceneId": "s13",
+    "name": "Tech Insert Shot",
+    "approval": "Rejected",
+    "assignedTo": "Riya",
+    "image": "https://picsum.photos/seed/sh63/600/400"
+  },
+  {
+    "id": "sh64",
+    "sceneId": "s13",
+    "name": "Space Low Angle",
+    "approval": "Partial",
+    "assignedTo": "Rohan",
+    "image": "https://picsum.photos/seed/sh64/600/400"
+  },
+  {
+    "id": "sh65",
+    "sceneId": "s13",
+    "name": "Space Insert Shot",
+    "approval": "Accepted",
+    "assignedTo": "Kabir",
+    "image": "https://picsum.photos/seed/sh65/600/400"
+  },
+  {
+    "id": "sh66",
+    "sceneId": "s14",
+    "name": "Space Close Up",
+    "approval": "Rejected",
+    "assignedTo": "Arjun",
+    "image": "https://picsum.photos/seed/sh66/600/400"
+  },
+  {
+    "id": "sh67",
+    "sceneId": "s14",
+    "name": "VFX Medium Shot",
+    "approval": "Accepted",
+    "assignedTo": "Vikram",
+    "image": "https://picsum.photos/seed/sh67/600/400"
+  },
+  {
+    "id": "sh68",
+    "sceneId": "s14",
+    "name": "VFX Medium Shot",
+    "approval": "Accepted",
+    "assignedTo": "Zoya",
+    "image": "https://picsum.photos/seed/sh68/600/400"
+  },
+  {
+    "id": "sh69",
+    "sceneId": "s14",
+    "name": "VFX Medium Shot",
+    "approval": "Rejected",
+    "assignedTo": "Aarav",
+    "image": "https://picsum.photos/seed/sh69/600/400"
+  },
+  {
+    "id": "sh70",
+    "sceneId": "s14",
+    "name": "VFX Low Angle",
+    "approval": "Partial",
+    "assignedTo": "Sarah",
+    "image": "https://picsum.photos/seed/sh70/600/400"
+  },
+  {
+    "id": "sh71",
+    "sceneId": "s15",
+    "name": "Space Wide Establishing",
+    "approval": "Accepted",
+    "assignedTo": "Sarah",
+    "image": "https://picsum.photos/seed/sh71/600/400"
+  },
+  {
+    "id": "sh72",
+    "sceneId": "s15",
+    "name": "Tech Medium Shot",
+    "approval": "Partial",
+    "assignedTo": "Arjun",
+    "image": "https://picsum.photos/seed/sh72/600/400"
+  },
+  {
+    "id": "sh73",
+    "sceneId": "s15",
+    "name": "Space Tracking Shot",
+    "approval": "Rejected",
+    "assignedTo": "Meera",
+    "image": "https://picsum.photos/seed/sh73/600/400"
+  },
+  {
+    "id": "sh74",
+    "sceneId": "s15",
+    "name": "VFX Dutch Angle",
+    "approval": "Partial",
+    "assignedTo": "Tara",
+    "image": "https://picsum.photos/seed/sh74/600/400"
+  },
+  {
+    "id": "sh75",
+    "sceneId": "s15",
+    "name": "VFX Insert Shot",
+    "approval": "Partial",
+    "assignedTo": "Arjun",
+    "image": "https://picsum.photos/seed/sh75/600/400"
+  },
+  {
+    "id": "sh76",
+    "sceneId": "s16",
+    "name": "Warm Close Up",
+    "approval": "Rejected",
+    "assignedTo": "Neha",
+    "image": "https://picsum.photos/seed/sh76/600/400"
+  },
+  {
+    "id": "sh77",
+    "sceneId": "s16",
+    "name": "Warm Close Up",
+    "approval": "Rejected",
+    "assignedTo": "Zoya",
+    "image": "https://picsum.photos/seed/sh77/600/400"
+  },
+  {
+    "id": "sh78",
+    "sceneId": "s16",
+    "name": "Warm POV",
+    "approval": "Accepted",
+    "assignedTo": "Aarav",
+    "image": "https://picsum.photos/seed/sh78/600/400"
+  },
+  {
+    "id": "sh79",
+    "sceneId": "s16",
+    "name": "Soft Insert Shot",
+    "approval": "Rejected",
+    "assignedTo": "Kiran",
+    "image": "https://picsum.photos/seed/sh79/600/400"
+  },
+  {
+    "id": "sh80",
+    "sceneId": "s16",
+    "name": "Warm POV",
+    "approval": "Partial",
+    "assignedTo": "Priya",
+    "image": "https://picsum.photos/seed/sh80/600/400"
+  },
+  {
+    "id": "sh81",
+    "sceneId": "s17",
+    "name": "Emotional Tracking Shot",
+    "approval": "Not Given",
+    "assignedTo": "Aditya",
+    "image": "https://picsum.photos/seed/sh81/600/400"
+  },
+  {
+    "id": "sh82",
+    "sceneId": "s17",
+    "name": "Warm Over The Shoulder",
+    "approval": "Partial",
+    "assignedTo": "Vikram",
+    "image": "https://picsum.photos/seed/sh82/600/400"
+  },
+  {
+    "id": "sh83",
+    "sceneId": "s17",
+    "name": "Emotional Tracking Shot",
+    "approval": "Not Given",
+    "assignedTo": "Priya",
+    "image": "https://picsum.photos/seed/sh83/600/400"
+  },
+  {
+    "id": "sh84",
+    "sceneId": "s17",
+    "name": "Warm Insert Shot",
+    "approval": "Partial",
+    "assignedTo": "Zoya",
+    "image": "https://picsum.photos/seed/sh84/600/400"
+  },
+  {
+    "id": "sh85",
+    "sceneId": "s17",
+    "name": "Warm Wide Establishing",
+    "approval": "Accepted",
+    "assignedTo": "Ishaan",
+    "image": "https://picsum.photos/seed/sh85/600/400"
+  },
+  {
+    "id": "sh86",
+    "sceneId": "s18",
+    "name": "Emotional Insert Shot",
+    "approval": "Not Given",
+    "assignedTo": "Sarah",
+    "image": "https://picsum.photos/seed/sh86/600/400"
+  },
+  {
+    "id": "sh87",
+    "sceneId": "s18",
+    "name": "Soft Medium Shot",
+    "approval": "Rejected",
+    "assignedTo": "Priya",
+    "image": "https://picsum.photos/seed/sh87/600/400"
+  },
+  {
+    "id": "sh88",
+    "sceneId": "s18",
+    "name": "Soft Insert Shot",
+    "approval": "Accepted",
+    "assignedTo": "Kabir",
+    "image": "https://picsum.photos/seed/sh88/600/400"
+  },
+  {
+    "id": "sh89",
+    "sceneId": "s18",
+    "name": "Emotional Over The Shoulder",
+    "approval": "Not Given",
+    "assignedTo": "Arjun",
+    "image": "https://picsum.photos/seed/sh89/600/400"
+  },
+  {
+    "id": "sh90",
+    "sceneId": "s18",
+    "name": "Emotional Insert Shot",
+    "approval": "Not Given",
+    "assignedTo": "Aarav",
+    "image": "https://picsum.photos/seed/sh90/600/400"
+  },
+  {
+    "id": "sh91",
+    "sceneId": "s19",
+    "name": "Emotional Medium Shot",
+    "approval": "Partial",
+    "assignedTo": "Neha",
+    "image": "https://picsum.photos/seed/sh91/600/400"
+  },
+  {
+    "id": "sh92",
+    "sceneId": "s19",
+    "name": "Warm Wide Establishing",
+    "approval": "Not Given",
+    "assignedTo": "Sarah",
+    "image": "https://picsum.photos/seed/sh92/600/400"
+  },
+  {
+    "id": "sh93",
+    "sceneId": "s19",
+    "name": "Emotional POV",
+    "approval": "Accepted",
+    "assignedTo": "Tara",
+    "image": "https://picsum.photos/seed/sh93/600/400"
+  },
+  {
+    "id": "sh94",
+    "sceneId": "s19",
+    "name": "Emotional Over The Shoulder",
+    "approval": "Partial",
+    "assignedTo": "Sarah",
+    "image": "https://picsum.photos/seed/sh94/600/400"
+  },
+  {
+    "id": "sh95",
+    "sceneId": "s19",
+    "name": "Soft Birds Eye",
+    "approval": "Partial",
+    "assignedTo": "Neha",
+    "image": "https://picsum.photos/seed/sh95/600/400"
+  },
+  {
+    "id": "sh96",
+    "sceneId": "s20",
+    "name": "Warm Close Up",
+    "approval": "Rejected",
+    "assignedTo": "Zoya",
+    "image": "https://picsum.photos/seed/sh96/600/400"
+  },
+  {
+    "id": "sh97",
+    "sceneId": "s20",
+    "name": "Emotional Insert Shot",
+    "approval": "Accepted",
+    "assignedTo": "Priya",
+    "image": "https://picsum.photos/seed/sh97/600/400"
+  },
+  {
+    "id": "sh98",
+    "sceneId": "s20",
+    "name": "Soft Dutch Angle",
+    "approval": "Not Given",
+    "assignedTo": "Aditya",
+    "image": "https://picsum.photos/seed/sh98/600/400"
+  },
+  {
+    "id": "sh99",
+    "sceneId": "s20",
+    "name": "Emotional Dutch Angle",
+    "approval": "Rejected",
+    "assignedTo": "Nisha",
+    "image": "https://picsum.photos/seed/sh99/600/400"
+  },
+  {
+    "id": "sh100",
+    "sceneId": "s20",
+    "name": "Emotional Tracking Shot",
+    "approval": "Rejected",
+    "assignedTo": "Meera",
+    "image": "https://picsum.photos/seed/sh100/600/400"
+  },
+  {
+    "id": "sh101",
+    "sceneId": "s21",
+    "name": "Close Up",
+    "approval": "Accepted",
+    "assignedTo": "Aditya",
+    "image": "https://picsum.photos/seed/sh101/600/400"
+  },
+  {
+    "id": "sh102",
+    "sceneId": "s21",
+    "name": "Birds Eye",
+    "approval": "Accepted",
+    "assignedTo": "Aarav",
+    "image": "https://picsum.photos/seed/sh102/600/400"
+  },
+  {
+    "id": "sh103",
+    "sceneId": "s21",
+    "name": "Tracking Shot",
+    "approval": "Not Given",
+    "assignedTo": "Zoya",
+    "image": "https://picsum.photos/seed/sh103/600/400"
+  },
+  {
+    "id": "sh104",
+    "sceneId": "s22",
+    "name": "POV",
+    "approval": "Not Given",
+    "assignedTo": "Rohan",
+    "image": "https://picsum.photos/seed/sh104/600/400"
+  },
+  {
+    "id": "sh105",
+    "sceneId": "s22",
+    "name": "Close Up",
+    "approval": "Partial",
+    "assignedTo": "Vikram",
+    "image": "https://picsum.photos/seed/sh105/600/400"
+  },
+  {
+    "id": "sh106",
+    "sceneId": "s22",
+    "name": "POV",
+    "approval": "Not Given",
+    "assignedTo": "Aditya",
+    "image": "https://picsum.photos/seed/sh106/600/400"
+  },
+  {
+    "id": "sh107",
+    "sceneId": "s23",
+    "name": "Low Angle",
+    "approval": "Accepted",
+    "assignedTo": "Arjun",
+    "image": "https://picsum.photos/seed/sh107/600/400"
+  },
+  {
+    "id": "sh108",
+    "sceneId": "s23",
+    "name": "Close Up",
+    "approval": "Accepted",
+    "assignedTo": "Meera",
+    "image": "https://picsum.photos/seed/sh108/600/400"
+  },
+  {
+    "id": "sh109",
+    "sceneId": "s23",
+    "name": "Birds Eye",
+    "approval": "Partial",
+    "assignedTo": "Zoya",
+    "image": "https://picsum.photos/seed/sh109/600/400"
+  },
+  {
+    "id": "sh110",
+    "sceneId": "s24",
+    "name": "Wide Establishing",
+    "approval": "Not Given",
+    "assignedTo": "Nisha",
+    "image": "https://picsum.photos/seed/sh110/600/400"
+  },
+  {
+    "id": "sh111",
+    "sceneId": "s24",
+    "name": "Tracking Shot",
+    "approval": "Partial",
+    "assignedTo": "Kabir",
+    "image": "https://picsum.photos/seed/sh111/600/400"
+  },
+  {
+    "id": "sh112",
+    "sceneId": "s24",
+    "name": "Dutch Angle",
+    "approval": "Rejected",
+    "assignedTo": "Aditya",
+    "image": "https://picsum.photos/seed/sh112/600/400"
+  },
+  {
+    "id": "sh113",
+    "sceneId": "s25",
+    "name": "Over The Shoulder",
+    "approval": "Rejected",
+    "assignedTo": "Tara",
+    "image": "https://picsum.photos/seed/sh113/600/400"
+  },
+  {
+    "id": "sh114",
+    "sceneId": "s25",
+    "name": "Wide Establishing",
+    "approval": "Rejected",
+    "assignedTo": "Neha",
+    "image": "https://picsum.photos/seed/sh114/600/400"
+  },
+  {
+    "id": "sh115",
+    "sceneId": "s25",
+    "name": "Close Up",
+    "approval": "Not Given",
+    "assignedTo": "Vikram",
+    "image": "https://picsum.photos/seed/sh115/600/400"
+  },
+  {
+    "id": "sh116",
+    "sceneId": "s26",
+    "name": "Wide Establishing",
+    "approval": "Accepted",
+    "assignedTo": "Neha",
+    "image": "https://picsum.photos/seed/sh116/600/400"
+  },
+  {
+    "id": "sh117",
+    "sceneId": "s26",
+    "name": "Wide Establishing",
+    "approval": "Not Given",
+    "assignedTo": "Dev",
+    "image": "https://picsum.photos/seed/sh117/600/400"
+  },
+  {
+    "id": "sh118",
+    "sceneId": "s26",
+    "name": "Medium Shot",
+    "approval": "Accepted",
+    "assignedTo": "Vikram",
+    "image": "https://picsum.photos/seed/sh118/600/400"
+  },
+  {
+    "id": "sh119",
+    "sceneId": "s27",
+    "name": "Tracking Shot",
+    "approval": "Rejected",
+    "assignedTo": "Arjun",
+    "image": "https://picsum.photos/seed/sh119/600/400"
+  },
+  {
+    "id": "sh120",
+    "sceneId": "s27",
+    "name": "Low Angle",
+    "approval": "Rejected",
+    "assignedTo": "Tara",
+    "image": "https://picsum.photos/seed/sh120/600/400"
+  },
+  {
+    "id": "sh121",
+    "sceneId": "s27",
+    "name": "POV",
+    "approval": "Not Given",
+    "assignedTo": "Kiran",
+    "image": "https://picsum.photos/seed/sh121/600/400"
+  },
+  {
+    "id": "sh122",
+    "sceneId": "s28",
+    "name": "Tracking Shot",
+    "approval": "Not Given",
+    "assignedTo": "Priya",
+    "image": "https://picsum.photos/seed/sh122/600/400"
+  },
+  {
+    "id": "sh123",
+    "sceneId": "s28",
+    "name": "Tracking Shot",
+    "approval": "Not Given",
+    "assignedTo": "Arjun",
+    "image": "https://picsum.photos/seed/sh123/600/400"
+  },
+  {
+    "id": "sh124",
+    "sceneId": "s28",
+    "name": "POV",
+    "approval": "Partial",
+    "assignedTo": "Sarah",
+    "image": "https://picsum.photos/seed/sh124/600/400"
+  },
+  {
+    "id": "sh125",
+    "sceneId": "s29",
+    "name": "Low Angle",
+    "approval": "Not Given",
+    "assignedTo": "Neha",
+    "image": "https://picsum.photos/seed/sh125/600/400"
+  },
+  {
+    "id": "sh126",
+    "sceneId": "s29",
+    "name": "Birds Eye",
+    "approval": "Not Given",
+    "assignedTo": "Rohan",
+    "image": "https://picsum.photos/seed/sh126/600/400"
+  },
+  {
+    "id": "sh127",
+    "sceneId": "s29",
+    "name": "Close Up",
+    "approval": "Not Given",
+    "assignedTo": "Aditya",
+    "image": "https://picsum.photos/seed/sh127/600/400"
+  },
+  {
+    "id": "sh128",
+    "sceneId": "s30",
+    "name": "POV",
+    "approval": "Accepted",
+    "assignedTo": "Tara",
+    "image": "https://picsum.photos/seed/sh128/600/400"
+  },
+  {
+    "id": "sh129",
+    "sceneId": "s30",
+    "name": "Close Up",
+    "approval": "Partial",
+    "assignedTo": "Zoya",
+    "image": "https://picsum.photos/seed/sh129/600/400"
+  },
+  {
+    "id": "sh130",
+    "sceneId": "s30",
+    "name": "Tracking Shot",
+    "approval": "Not Given",
+    "assignedTo": "Aarav",
+    "image": "https://picsum.photos/seed/sh130/600/400"
+  },
+  {
+    "id": "sh131",
+    "sceneId": "s31",
+    "name": "Wide Establishing",
+    "approval": "Not Given",
+    "assignedTo": "Sarah",
+    "image": "https://picsum.photos/seed/sh131/600/400"
+  },
+  {
+    "id": "sh132",
+    "sceneId": "s31",
+    "name": "Birds Eye",
+    "approval": "Accepted",
+    "assignedTo": "Meera",
+    "image": "https://picsum.photos/seed/sh132/600/400"
+  },
+  {
+    "id": "sh133",
+    "sceneId": "s31",
+    "name": "Dutch Angle",
+    "approval": "Rejected",
+    "assignedTo": "Neha",
+    "image": "https://picsum.photos/seed/sh133/600/400"
+  },
+  {
+    "id": "sh134",
+    "sceneId": "s32",
+    "name": "Tracking Shot",
+    "approval": "Not Given",
+    "assignedTo": "Meera",
+    "image": "https://picsum.photos/seed/sh134/600/400"
+  },
+  {
+    "id": "sh135",
+    "sceneId": "s32",
+    "name": "Wide Establishing",
+    "approval": "Not Given",
+    "assignedTo": "Nisha",
+    "image": "https://picsum.photos/seed/sh135/600/400"
+  },
+  {
+    "id": "sh136",
+    "sceneId": "s32",
+    "name": "Low Angle",
+    "approval": "Accepted",
+    "assignedTo": "Neha",
+    "image": "https://picsum.photos/seed/sh136/600/400"
+  },
+  {
+    "id": "sh137",
+    "sceneId": "s33",
+    "name": "Tracking Shot",
+    "approval": "Not Given",
+    "assignedTo": "Rohan",
+    "image": "https://picsum.photos/seed/sh137/600/400"
+  },
+  {
+    "id": "sh138",
+    "sceneId": "s33",
+    "name": "POV",
+    "approval": "Not Given",
+    "assignedTo": "Vikram",
+    "image": "https://picsum.photos/seed/sh138/600/400"
+  },
+  {
+    "id": "sh139",
+    "sceneId": "s33",
+    "name": "POV",
+    "approval": "Rejected",
+    "assignedTo": "Tara",
+    "image": "https://picsum.photos/seed/sh139/600/400"
+  },
+  {
+    "id": "sh140",
+    "sceneId": "s34",
+    "name": "Medium Shot",
+    "approval": "Not Given",
+    "assignedTo": "Arjun",
+    "image": "https://picsum.photos/seed/sh140/600/400"
+  },
+  {
+    "id": "sh141",
+    "sceneId": "s34",
+    "name": "Wide Establishing",
+    "approval": "Accepted",
+    "assignedTo": "Riya",
+    "image": "https://picsum.photos/seed/sh141/600/400"
+  },
+  {
+    "id": "sh142",
+    "sceneId": "s34",
+    "name": "Insert Shot",
+    "approval": "Accepted",
+    "assignedTo": "Nisha",
+    "image": "https://picsum.photos/seed/sh142/600/400"
+  },
+  {
+    "id": "sh143",
+    "sceneId": "s35",
+    "name": "POV",
+    "approval": "Not Given",
+    "assignedTo": "Priya",
+    "image": "https://picsum.photos/seed/sh143/600/400"
+  },
+  {
+    "id": "sh144",
+    "sceneId": "s35",
+    "name": "Over The Shoulder",
+    "approval": "Rejected",
+    "assignedTo": "Aarav",
+    "image": "https://picsum.photos/seed/sh144/600/400"
+  },
+  {
+    "id": "sh145",
+    "sceneId": "s35",
+    "name": "POV",
+    "approval": "Accepted",
+    "assignedTo": "Kiran",
+    "image": "https://picsum.photos/seed/sh145/600/400"
   }
 ]

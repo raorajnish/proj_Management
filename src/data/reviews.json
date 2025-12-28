@@ -1,9 +1,86 @@
 [
   {
     "id": "r1",
+    "versionId": "v1",
+    "reviewer": "Creative Lead",
+    "comment": "Too dark, increase exposure.",
+    "status": "Rejected"
+  },
+  {
+    "id": "r2",
     "versionId": "v2",
     "reviewer": "Creative Lead",
-    "comment": "Lighting looks better, adjust contrast",
+    "comment": "Better, but the composition is off-balance.",
+    "status": "Rejected"
+  },
+  {
+    "id": "r3",
+    "versionId": "v3",
+    "reviewer": "Director",
+    "comment": "Nice lighting, fix the grain issues.",
     "status": "Partial"
+  },
+  {
+    "id": "r4",
+    "versionId": "v4",
+    "reviewer": "Director",
+    "comment": "Perfect. Use this for the cut.",
+    "status": "Accepted"
+  },
+  {
+    "id": "r5",
+    "versionId": "v5",
+    "reviewer": "VFX Supervisor",
+    "comment": "Animation is stiff.",
+    "status": "Rejected"
+  },
+  {
+    "id": "r6",
+    "versionId": "v6",
+    "reviewer": "VFX Supervisor",
+    "comment": "Review pending.",
+    "status": "Not Given"
+  },
+  {
+    "id": "r7",
+    "versionId": "v7",
+    "reviewer": "Creative Lead",
+    "comment": "Motion is good, color grading needs warmth.",
+    "status": "Partial"
+  },
+  {
+    "id": "r8",
+    "versionId": "v8",
+    "reviewer": "Director",
+    "comment": "Approved.",
+    "status": "Accepted"
+  },
+  {
+    "id": "r9",
+    "versionId": "v9",
+    "reviewer": "Creative Lead",
+    "comment": "Just a blocking pass, looks okay so far.",
+    "status": "Partial"
+  },
+  {
+    "id": "r10",
+    "versionId": "v10",
+    "reviewer": "Creative Lead",
+    "comment": "Focus pull is late.",
+    "status": "Rejected"
+  },
+  {
+    "id": "r11",
+    "versionId": "v11",
+    "reviewer": "Director",
+    "comment": "Waiting for producer feedback.",
+    "status": "Not Given"
+  },
+  {
+    "id": "r12",
+    "versionId": "v12",
+    "reviewer": "Director",
+    "comment": "Great work on the shadows.",
+    "status": "Accepted"
   }
 ]
