@@ -58,6 +58,79 @@ html[data-theme="dark"] {
   --progress-fill-high: hsl(140 40% 55%);
 }
 
+@theme {
+  /* ===============================
+     Animation Variables
+     =============================== */
+
+  /* --animate-load: load 420ms cubic-bezier(0.22, 1, 0.36, 1) both; */
+  --animate-appear: appear 320ms cubic-bezier(0.4, 0, 0.2, 1) both;
+  --animate-load: load 460ms cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  @keyframes load {
+    from {
+      opacity: 0;
+      transform: scale(0.985);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes appear-up {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+--animate-appear-up: appear-up 280ms ease-out both;
+
+@keyframes appear-right {
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+--animate-appear-right: appear-right 300ms cubic-bezier(0.4, 0, 0.2, 1) both;
+
+@keyframes appear-left {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+--animate-appear-left: appear-left 300ms ease-out both;
+
+}
+
+
 @theme inline {
   --color-accent: var(--color-accent);
   --color-foreground: var(--color-foreground);
@@ -82,7 +155,7 @@ html[data-theme="dark"] {
 html,
 body {
   font-family: var(--font-lora);
-  background: var(--color-background);
+  background: var(--color-bg-dark);
   color: var(--color-maintext);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -137,3 +210,57 @@ body {
 .upload-glow:hover {
   box-shadow: 0 0 0 2px var(--accent);
 }
+
+
+/* ===========================
+   Global Custom Scrollbar
+   =========================== */
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scroll-thumb) transparent;
+}
+
+/* WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb);
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scroll-thumb-hover);
+}
+
+/* Corner (bottom-right) */
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Card hover micro-interaction */
+.card-hover {
+  will-change: transform, box-shadow;
+  transition:
+    transform 280ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 320ms ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.08),
+    0 4px 10px rgba(0, 0, 0, 0.04);
+}
+

@@ -35,7 +35,7 @@ const ProjectResources = () => {
         {resources.map((res) => (
           <li
             key={res.name}
-            className="flex items-center justify-between gap-3"
+            className="flex items-center justify-between gap-3 "
           >
             <div className="flex items-center gap-3">
               <div className="bg-bg-light border-border flex h-9 w-9 items-center justify-center rounded-lg border">

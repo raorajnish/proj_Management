@@ -11,7 +11,7 @@ const ProductsPage = () => {
       <div className="mb-6 flex items-center justify-between gap-4">
         <h2 className="font-bbh text-maintext text-3xl">Projects</h2>
 
-        <button className="font-gothic border-border rounded-xl border bg-black px-4 py-2 text-white transition hover:opacity-90">
+        <button className="font-gothic btn rounded-xl bg-black dark:bg-white/60 px-5 py-2 text-white dark:text-black">
           + New Project
         </button>
       </div>

@@ -57,7 +57,7 @@ const ShotsPage = () => {
               <p className="text-subtext mt-2">Shots under this scene</p>
             </div>
 
-            <button className="bg-accent font-gothic rounded-xl px-5 py-2 text-white">
+            <button className="font-gothic btn rounded-xl bg-black px-5 py-2 text-white dark:bg-white/60 dark:text-black">
               + New Shot
             </button>
           </div>
@@ -68,7 +68,7 @@ const ShotsPage = () => {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`relative pb-3 text-sm font-semibold transition ${
+                className={`relative pb-3 text-sm font-semibold transition focus:outline-none ${
                   activeTab === tab
                     ? "text-maintext"
                     : "text-subtext hover:text-maintext"
@@ -78,7 +78,7 @@ const ShotsPage = () => {
 
                 {/* Active underline */}
                 {activeTab === tab && (
-                  <span className="absolute inset-x-0 bottom-px h-0.5 rounded-full bg-bg-light" />
+                  <span className="bg-bg-light absolute inset-x-0 bottom-px h-0.5 rounded-full" />
                 )}
               </button>
             ))}

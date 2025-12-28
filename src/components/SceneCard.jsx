@@ -10,7 +10,7 @@ const SceneCard = ({ scene }) => {
   return (
     <div
       onClick={() => navigate(`/scene/${scene.id}`)}
-      className="card group relative flex cursor-pointer flex-col rounded-xl p-5 transition-all hover:-translate-y-1 hover:shadow-lg"
+      className="card group relative flex cursor-pointer flex-col rounded-xl p-5 card-hover"
     >
       {/* Header */}
       <div className="flex items-start justify-between gap-3">

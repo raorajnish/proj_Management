@@ -11,7 +11,7 @@ const ProductCard = ({ product, onClick }) => {
   return (
     <div
       onClick={onClick}
-      className="card relative flex h-full cursor-pointer flex-col overflow-hidden rounded-xl p-6 "
+      className="card card-hover relative flex h-full cursor-pointer flex-col overflow-hidden rounded-xl p-6 "
     >
       {/* Title */}
       <h2 className="font-bbh text-maintext text-xl">{name}</h2>

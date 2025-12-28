@@ -9,7 +9,7 @@ const ShotCard = ({ shot }) => {
   return (
     <div
       onClick={() => navigate(`/shot/${shot.id}`)}
-      className="card group cursor-pointer overflow-hidden rounded-xl transition hover:-translate-y-1"
+      className="card card-hover group cursor-pointer overflow-hidden rounded-xl"
     >
       {/* Image */}
       <div className="relative aspect-video overflow-hidden">

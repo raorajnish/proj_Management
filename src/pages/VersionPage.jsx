@@ -76,9 +76,9 @@ const VersionPage = () => {
 
       <div className="flex flex-col gap-8 lg:flex-row">
         {/* ================= MAIN ================= */}
-        <main className="flex-1 space-y-6">
+        <main className="flex-1 space-y-6 ">
           {/* ===== Image Preview ===== */}
-          <div className="border-border bg-bg-light relative rounded-xl border p-4">
+          <div className="border-border card bg-bg-light relative rounded-xl border p-4 min-h-75 sm:min-h-100 ">
             {/* Review Status */}
             {reviewStatus && (
               <span

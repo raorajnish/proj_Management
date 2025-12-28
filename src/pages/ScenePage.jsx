@@ -34,7 +34,7 @@ const ScenePage = () => {
               </p>
             </div>
 
-            <button className="font-gothic rounded-xl bg-black dark:bg-white/60 px-5 py-2 text-white dark:text-black">
+            <button className="font-gothic btn rounded-xl bg-black dark:bg-white/60 px-5 py-2 text-white dark:text-black">
               + New Scene
             </button>
           </div>
