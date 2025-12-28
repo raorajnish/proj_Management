@@ -5,7 +5,7 @@ import shots from "../data/shots.json";
 import ShotCard from "../components/ShotCard";
 import ProjectResources from "../components/ProjectResources";
 import CompletionStatus from "../components/CompletionStatus";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const statusTabs = ["All", "Accepted", "Partial", "Rejected", "Not Given"];
 
@@ -14,8 +14,13 @@ const ShotsPage = () => {
   const scene = scenes.find((s) => s.id === sceneId);
   const project = products.find((p) => p.id === scene.projectId);
 
-
   const [activeTab, setActiveTab] = useState("All");
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const t = setTimeout(() => setLoading(false), 1000);
+    return () => clearTimeout(t);
+  }, []);
 
   if (!scene) return <p>Scene not found</p>;
 
@@ -86,20 +91,38 @@ const ShotsPage = () => {
 
           {/* Shots Grid */}
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
-            {filteredShots.map((shot) => (
-              <ShotCard key={shot.id} shot={shot} />
-            ))}
+            {loading ? (
+              // Skeleton placeholders while loading
+              Array.from({ length: 6 }).map((_, i) => (
+                <div
+                  key={i}
+                  className="card animate-pulse overflow-hidden rounded-xl"
+                >
+                  <div className="bg-loading relative aspect-video" />
+                  <div className="p-4">
+                    <div className="bg-loading mb-2 h-4 w-3/4 rounded" />
+                    <div className="bg-loading h-3 w-1/2 rounded" />
+                  </div>
+                </div>
+              ))
+            ) : (
+              <>
+                {filteredShots.map((shot) => (
+                  <ShotCard key={shot.id} shot={shot} />
+                ))}
 
-            {filteredShots.length === 0 && (
-              <p className="text-subtext">No shots found.</p>
+                {filteredShots.length === 0 && (
+                  <p className="text-subtext">No shots found.</p>
+                )}
+              </>
             )}
           </div>
         </main>
 
-        {/* SIDEBAR (unchanged) */}
+        {/* SIDEBAR (loading synced) */}
         <aside className="w-full space-y-6 lg:w-80">
-          <ProjectResources />
-          <CompletionStatus scenes={[scene]} />
+          <ProjectResources loading={loading} />
+          <CompletionStatus scenes={[scene]} loading={loading} />
         </aside>
       </div>
     </div>

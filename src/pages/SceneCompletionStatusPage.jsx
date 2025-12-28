@@ -1,5 +1,5 @@
 import { useParams, useNavigate, Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import scenes from "../data/scenes.json";
 import products from "../data/products.json";
 import { getProgressColor } from "../components/utils/getProgressColor";
@@ -18,6 +18,12 @@ const SceneCompletionStatusPage = () => {
   const inProgress = projectScenes.filter(
     (s) => s.completion > 0 && s.completion < 100,
   ).length;
+
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const t = setTimeout(() => setLoading(false), 1000);
+    return () => clearTimeout(t);
+  }, []);
 
   const avgVelocity = "4 days";
 
@@ -68,7 +74,7 @@ const SceneCompletionStatusPage = () => {
 
         <button
           onClick={() => navigate(`/project/${projectId}/master`)}
-          className="bg-accent rounded-xl px-5 py-2 text-sm font-semibold text-maintext border border-maintext"
+          className="bg-accent text-maintext border-maintext rounded-xl border px-5 py-2 text-sm font-semibold"
         >
           Master View
         </button>
@@ -76,23 +82,44 @@ const SceneCompletionStatusPage = () => {
 
       {/* Summary Cards */}
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-        <StatCard label="Total Scenes" value={totalScenes} icon={<Layers />} />
-        <StatCard
-          label="Completed"
-          value={completed}
-          icon={<CheckCircle className="text-green-500" />}
-        />
-        <StatCard
-          label="In Progress"
-          value={inProgress}
-          icon={<TrendingUp className="text-blue-500" />}
-        />
-        <StatCard
-          label="Avg Velocity"
-          value={avgVelocity}
-          sub="remaining"
-          icon={<Clock className="text-purple-500" />}
-        />
+        {loading ? (
+          Array.from({ length: 4 }).map((_, i) => (
+            <div
+              key={i}
+              className="border-border bg-bg-light flex animate-pulse items-center justify-between rounded-xl border p-4"
+            >
+              <div>
+                <div className="bg-loading mb-2 h-3 w-24 rounded" />
+                <div className="bg-loading h-7 w-16 rounded" />
+              </div>
+              <div className="bg-loading h-9 w-9 rounded-lg" />
+            </div>
+          ))
+        ) : (
+          <>
+            <StatCard
+              label="Total Scenes"
+              value={totalScenes}
+              icon={<Layers />}
+            />
+            <StatCard
+              label="Completed"
+              value={completed}
+              icon={<CheckCircle className="text-green-500" />}
+            />
+            <StatCard
+              label="In Progress"
+              value={inProgress}
+              icon={<TrendingUp className="text-blue-500" />}
+            />
+            <StatCard
+              label="Avg Velocity"
+              value={avgVelocity}
+              sub="remaining"
+              icon={<Clock className="text-purple-500" />}
+            />
+          </>
+        )}
       </div>
 
       {/* Search + Filters */}
@@ -144,43 +171,61 @@ const SceneCompletionStatusPage = () => {
           </thead>
 
           <tbody>
-            {filteredScenes.map((scene) => {
-              const color = getProgressColor(scene.completion);
-
-              return (
-                <tr
-                  key={scene.id}
-                  onClick={() =>
-                    navigate(
-                      `/project/${projectId}/scene/${scene.id}/completion`,
-                    )
-                  }
-                  className="border-border cursor-pointer hover:bg-bg-light/60 border-t transition"
-                >
-                  <td className="p-3 font-medium">{scene.name}</td>
-
+            {loading ? (
+              Array.from({ length: 6 }).map((_, i) => (
+                <tr key={i} className="border-border border-t">
                   <td className="p-3">
-                    <span
-                      className="rounded-full px-2.5 py-1 text-xs font-bold"
-                      style={{ background: color }}
-                    >
-                      {scene.completion}%
-                    </span>
+                    <div className="bg-loading h-4 w-48 animate-pulse rounded" />
                   </td>
-
-                  <td className="text-subtext p-3">
-                    {scene.assignedPeople?.join(", ") || "—"}
+                  <td className="p-3">
+                    <div className="bg-loading h-4 w-20 animate-pulse rounded" />
+                  </td>
+                  <td className="p-3">
+                    <div className="bg-loading h-4 w-36 animate-pulse rounded" />
                   </td>
                 </tr>
-              );
-            })}
+              ))
+            ) : (
+              <>
+                {filteredScenes.map((scene) => {
+                  const color = getProgressColor(scene.completion);
 
-            {filteredScenes.length === 0 && (
-              <tr>
-                <td colSpan="3" className="text-subtext p-6 text-center">
-                  No scenes found
-                </td>
-              </tr>
+                  return (
+                    <tr
+                      key={scene.id}
+                      onClick={() =>
+                        navigate(
+                          `/project/${projectId}/scene/${scene.id}/completion`,
+                        )
+                      }
+                      className="border-border hover:bg-bg-light/60 cursor-pointer border-t transition"
+                    >
+                      <td className="p-3 font-medium">{scene.name}</td>
+
+                      <td className="p-3">
+                        <span
+                          className="rounded-full px-2.5 py-1 text-xs font-bold"
+                          style={{ background: color }}
+                        >
+                          {scene.completion}%
+                        </span>
+                      </td>
+
+                      <td className="text-subtext p-3">
+                        {scene.assignedPeople?.join(", ") || "—"}
+                      </td>
+                    </tr>
+                  );
+                })}
+
+                {filteredScenes.length === 0 && (
+                  <tr>
+                    <td colSpan="3" className="text-subtext p-6 text-center">
+                      No scenes found
+                    </td>
+                  </tr>
+                )}
+              </>
             )}
           </tbody>
         </table>

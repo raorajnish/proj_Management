@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import products from "../data/products.json";
 import scenes from "../data/scenes.json";
 import SceneCard from "../components/SceneCard";
@@ -9,6 +10,13 @@ const ScenePage = () => {
   const { projectId } = useParams();
   const project = products.find((p) => p.id === projectId);
   const projectScenes = scenes.filter((s) => s.projectId === projectId);
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const t = setTimeout(() => setLoading(false), 1000);
+    return () => clearTimeout(t);
+  }, []);
 
   if (!project) return <p>Project not found</p>;
 
@@ -34,22 +42,55 @@ const ScenePage = () => {
               </p>
             </div>
 
-            <button className="font-gothic btn rounded-xl bg-black dark:bg-white/60 px-5 py-2 text-white dark:text-black">
+            <button className="font-gothic btn rounded-xl bg-black px-5 py-2 text-white dark:bg-white/60 dark:text-black">
               + New Scene
             </button>
           </div>
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
-            {projectScenes.map((scene) => (
-              <SceneCard key={scene.id} scene={scene} />
-            ))}
+            {loading
+              ? Array.from({ length: Math.max(projectScenes.length, 6) }).map(
+                  (_, i) => (
+                    <div
+                      key={i}
+                      className="card group card-hover relative flex animate-pulse cursor-pointer flex-col rounded-xl p-5"
+                    >
+                      {/* Header placeholder */}
+                      <div className="flex items-start justify-between">
+                        <div>
+                          <div className="bg-loading mb-2 h-5 w-36 rounded" />
+                          <div className="bg-loading h-3 w-3/4 rounded" />
+                        </div>
+
+                        <div className="bg-loading rounded-full px-2.5 py-1 text-[8px] font-bold" />
+                      </div>
+
+                      {/* Footer placeholder */}
+                      <div className="mt-auto flex items-center justify-between gap-4 pt-4">
+                        <div className="flex -space-x-2">
+                          <div className="bg-loading h-8 w-8 rounded-full" />
+                          <div className="bg-loading h-8 w-8 rounded-full" />
+                        </div>
+
+                        <div className="flex w-28 flex-col items-end">
+                          <div className="bg-loading mb-2 h-4 w-12 rounded" />
+
+                          <div className="bg-loading h-1.5 w-full rounded" />
+                        </div>
+                      </div>
+                    </div>
+                  ),
+                )
+              : projectScenes.map((scene) => (
+                  <SceneCard key={scene.id} scene={scene} />
+                ))}
           </div>
         </main>
 
         {/* SIDEBAR */}
         <aside className="w-full space-y-6 lg:w-80">
-          <ProjectResources />
-          <CompletionStatus scenes={projectScenes} />
+          <ProjectResources loading={loading} />
+          <CompletionStatus scenes={projectScenes} loading={loading} />
         </aside>
       </div>
     </div>

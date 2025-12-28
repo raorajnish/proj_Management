@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import versions from "../data/versions.json";
 import shots from "../data/shots.json";
@@ -15,6 +15,12 @@ const MasterPage = () => {
   const { projectId } = useParams();
   const [activeTab, setActiveTab] = useState("All");
   const [selected, setSelected] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const t = setTimeout(() => setLoading(false), 1000);
+    return () => clearTimeout(t);
+  }, []);
 
   const project = products.find((p) => p.id === projectId);
 
@@ -106,46 +112,60 @@ const MasterPage = () => {
 
       {/* Grid */}
       <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 xl:grid-cols-4">
-        {filtered.map((v) => {
-          const statusColor = getProgressColor(
-            v.status === "Accepted"
-              ? 100
-              : v.status === "Partial"
-                ? 60
-                : v.status === "Rejected"
-                  ? 20
-                  : 0,
-          );
-
-          return (
-            <button
-              key={v.id}
-              onClick={() => setSelected(v)}
-              className="card card-hover group relative overflow-hidden rounded-xl p-3 transition hover:-translate-y-1 hover:shadow-lg"
-            >
-              <img
-                src={v.image}
-                alt={v.label}
-                className="h-40 w-full rounded-lg object-cover"
-              />
-
-              <div className="mt-3 text-sm font-semibold">{v.label}</div>
-              <div className="text-subtext text-xs">{v.scene.name}</div>
-
+        {loading
+          ? Array.from({ length: Math.max(filtered.length, 8) }).map((_, i) => (
               <div
-                className="absolute inset-x-0 bottom-0 h-0.5"
-                style={{
-                  background: `linear-gradient(
-                    to right,
-                    transparent,
-                    ${statusColor},
-                    transparent
-                  )`,
-                }}
-              />
-            </button>
-          );
-        })}
+                key={i}
+                className="card card-hover group relative animate-pulse overflow-hidden rounded-xl p-3"
+              >
+                <div className="bg-loading h-40 w-full rounded-lg" />
+
+                <div className="bg-loading mt-3 h-4 w-3/4 rounded" />
+                <div className="bg-loading mt-1 h-3 w-1/2 rounded" />
+
+                <div className="bg-loading absolute inset-x-0 bottom-0 h-0.5" />
+              </div>
+            ))
+          : filtered.map((v) => {
+              const statusColor = getProgressColor(
+                v.status === "Accepted"
+                  ? 100
+                  : v.status === "Partial"
+                    ? 60
+                    : v.status === "Rejected"
+                      ? 20
+                      : 0,
+              );
+
+              return (
+                <button
+                  key={v.id}
+                  onClick={() => setSelected(v)}
+                  className="card card-hover group relative overflow-hidden rounded-xl p-3 transition hover:-translate-y-1 hover:shadow-lg"
+                >
+                  <img
+                    src={v.image}
+                    alt={v.label}
+                    className="h-40 w-full rounded-lg object-cover"
+                  />
+
+                  <div className="mt-3 text-sm font-semibold">{v.label}</div>
+                  <div className="text-subtext text-xs">{v.scene.name}</div>
+
+                  <div
+                    className="absolute inset-x-0 bottom-0 h-0.5"
+                    style={{
+                      background: `linear-gradient(
+                      to right,
+                      transparent,
+                      ${statusColor},
+                      transparent
+                    )`,
+                    }}
+                  />
+                </button>
+              );
+            })}
       </div>
 
       {/* Modal */}
@@ -162,7 +182,7 @@ const MasterPage = () => {
             <button
               onClick={goPrev}
               disabled={currentIndex === 0}
-              className="absolute top-1/2 left-3 -translate-y-1/2 rounded-full border px-2 py-1 text-lg disabled:opacity-30"
+              className="absolute btn top-1/2 left-3 -translate-y-1/2 rounded-full border px-2 py-1 text-lg disabled:opacity-30 z-10"
             >
               ←
             </button>
@@ -204,7 +224,7 @@ const MasterPage = () => {
               </div>
 
               {/* Info + Reviews */}
-              <div className="flex flex-col justify-between">
+              <div className="flex  flex-col justify-between">
                 <div className="space-y-4">
                   <h2 className="font-bbh text-2xl">{selected.label}</h2>
 
@@ -214,17 +234,17 @@ const MasterPage = () => {
                   <Info label="Created" value={selected.createdAt} />
 
                   {/* Reviews */}
-                  <div className="pt-4">
+                  <div className="pt-4 ">
                     <h3 className="mb-2 font-semibold">Review Comments</h3>
 
                     {selectedReviews.length === 0 ? (
-                      <p className="text-subtext text-sm">No reviews yet</p>
+                      <p className="text-subtext text-sm btn">No reviews yet</p>
                     ) : (
-                      <div className="space-y-2">
+                      <div className="space-y-2 ">
                         {selectedReviews.map((r) => (
                           <div
                             key={r.id}
-                            className="border-border rounded-lg border p-3"
+                            className="border-border card rounded-lg border p-3"
                           >
                             <div className="flex items-center justify-between">
                               <span className="text-sm font-semibold">
@@ -258,7 +278,7 @@ const MasterPage = () => {
 
                 <button
                   onClick={() => setSelected(null)}
-                  className="border-border hover:bg-bg mt-6 self-start rounded-xl border px-5 py-2 text-sm font-semibold transition"
+                  className="border-border card hover:bg-bg mt-6 self-start rounded-xl border px-5 py-2 text-sm font-semibold transition"
                 >
                   Close
                 </button>

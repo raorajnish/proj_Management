@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { UploadCloud, FileText } from "lucide-react";
 
 import products from "../data/products.json";
@@ -23,6 +23,14 @@ const VersionPage = () => {
 
   const [localVersions, setLocalVersions] = useState(shotVersions);
   const [activeVersion, setActiveVersion] = useState(shotVersions[0]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // show skeleton for at least 1s when active version changes
+    setLoading(true);
+    const t = setTimeout(() => setLoading(false), 1000);
+    return () => clearTimeout(t);
+  }, [activeVersion]);
 
   const versionReviews = reviews.filter(
     (r) => r.versionId === activeVersion?.id,
@@ -76,57 +84,79 @@ const VersionPage = () => {
 
       <div className="flex flex-col gap-8 lg:flex-row">
         {/* ================= MAIN ================= */}
-        <main className="flex-1 space-y-6 ">
+        <main className="flex-1 space-y-6">
           {/* ===== Image Preview ===== */}
-          <div className="border-border card bg-bg-light relative rounded-xl border p-4 min-h-75 sm:min-h-100 ">
-            {/* Review Status */}
-            {reviewStatus && (
-              <span
-                className="absolute top-4 right-4 rounded-full px-3 py-1 text-xs font-bold"
-                style={{
-                  background: getProgressColor(
-                    reviewStatus === "Accepted"
-                      ? 100
-                      : reviewStatus === "Partial"
-                        ? 60
-                        : 20,
-                  ),
-                }}
-              >
-                {reviewStatus}
-              </span>
-            )}
+          {loading ? (
+            <div
+              className="border-border card bg-bg-light relative flex min-h-75 items-center justify-center rounded-xl border p-4 sm:min-h-100"
+              aria-busy="true"
+            >
+              <div className="bg-loading mx-auto max-h-105 w-full animate-pulse rounded-lg" />
+            </div>
+          ) : (
+            <div className="border-border card bg-bg-light relative min-h-75 rounded-xl border p-4 sm:min-h-110">
+              {/* Review Status */}
+              {reviewStatus && (
+                <span
+                  className="absolute top-4 right-4 rounded-full px-3 py-1 text-xs font-bold"
+                  style={{
+                    background: getProgressColor(
+                      reviewStatus === "Accepted"
+                        ? 100
+                        : reviewStatus === "Partial"
+                          ? 60
+                          : 20,
+                    ),
+                  }}
+                >
+                  {reviewStatus}
+                </span>
+              )}
 
-            <img
-              src={activeVersion.image}
-              alt={activeVersion.label}
-              className="mx-auto max-h-105 w-full rounded-lg object-contain"
-            />
-          </div>
+              {activeVersion ? (
+                <img
+                  src={activeVersion.image}
+                  alt={activeVersion.label}
+                  className="mx-auto max-h-105 w-full rounded-lg object-contain"
+                />
+              ) : (
+                <p className="text-subtext text-center">No versions yet</p>
+              )}
+            </div>
+          )}
 
           {/* ===== Versions Strip ===== */}
           <div className="relative">
-            <div className="scrollbar-thin scrollbar-thumb-border flex justify-center items-center gap-3 overflow-x-auto pb-2">
-              {localVersions.map((v) => (
-                <button
-                  key={v.id}
-                  onClick={() => setActiveVersion(v)}
-                  className={`shrink-0 rounded-lg border p-1 transition ${
-                    activeVersion.id === v.id
-                      ? "border-accent"
-                      : "border-border hover:border-accent/50"
-                  }`}
-                >
-                  <img
-                    src={v.image}
-                    alt={v.label}
-                    className="h-20 w-28 rounded object-cover"
-                  />
-                  <span className="mt-1 block text-center text-xs font-semibold">
-                    {v.label}
-                  </span>
-                </button>
-              ))}
+            <div className="scrollbar-thin scrollbar-thumb-border flex items-center justify-center gap-3 overflow-x-auto pb-2">
+              {loading
+                ? Array.from({ length: Math.max(localVersions.length, 4) }).map(
+                    (_, i) => (
+                      <div key={i} className="shrink-0 rounded-lg border p-1">
+                        <div className="bg-loading h-20 w-28 animate-pulse rounded" />
+                        <div className="bg-loading mx-auto mt-1 h-3 w-16 rounded" />
+                      </div>
+                    ),
+                  )
+                : localVersions.map((v) => (
+                    <button
+                      key={v.id}
+                      onClick={() => setActiveVersion(v)}
+                      className={`shrink-0 rounded-lg border p-1 transition ${
+                        activeVersion?.id === v.id
+                          ? "border-accent"
+                          : "border-border hover:border-accent/50"
+                      }`}
+                    >
+                      <img
+                        src={v.image}
+                        alt={v.label}
+                        className="h-20 w-28 rounded object-cover"
+                      />
+                      <span className="mt-1 block text-center text-xs font-semibold">
+                        {v.label}
+                      </span>
+                    </button>
+                  ))}
             </div>
           </div>
 
@@ -151,23 +181,53 @@ const VersionPage = () => {
           <div className="card border-border bg-bg-light rounded-xl border p-5">
             <h3 className="mb-4 font-semibold">References</h3>
 
-            <div className="border-border flex items-center gap-3 rounded-lg border p-3">
-              <FileText size={18} />
-              <span className="text-sm font-medium">SB_Sketch.pdf</span>
-            </div>
+            {loading ? (
+              <div>
+                <div className="border-border flex items-center gap-3 rounded-lg border p-3">
+                  <div className="bg-loading h-5 w-5 animate-pulse rounded" />
+                  <div className="bg-loading ml-2 h-4 w-32 rounded" />
+                </div>
 
-            <div className="mt-3 flex gap-2">
-              <div className="border-border h-10 w-10 rounded border" />
-              <div className="border-border h-10 w-10 rounded border" />
-              <div className="border-border h-10 w-10 rounded border" />
-            </div>
+                <div className="mt-3 flex gap-2">
+                  <div className="bg-loading h-10 w-10 animate-pulse rounded" />
+                  <div className="bg-loading h-10 w-10 animate-pulse rounded" />
+                  <div className="bg-loading h-10 w-10 animate-pulse rounded" />
+                </div>
+              </div>
+            ) : (
+              <>
+                <div className="border-border flex items-center gap-3 rounded-lg border p-3">
+                  <FileText size={18} />
+                  <span className="text-sm font-medium">SB_Sketch.pdf</span>
+                </div>
+
+                <div className="mt-3 flex gap-2">
+                  <div className="border-border h-10 w-10 rounded border" />
+                  <div className="border-border h-10 w-10 rounded border" />
+                  <div className="border-border h-10 w-10 rounded border" />
+                </div>
+              </>
+            )}
           </div>
 
           {/* ===== Review ===== */}
           <div className="card border-border bg-bg-light rounded-xl border p-5">
             <h3 className="mb-4 font-semibold">Review</h3>
 
-            {versionReviews.length === 0 ? (
+            {loading ? (
+              <div className="space-y-3">
+                {Array.from({ length: 2 }).map((_, i) => (
+                  <div key={i} className="border-border rounded-lg border p-3">
+                    <div className="flex items-center justify-between">
+                      <div className="bg-loading h-4 w-28 animate-pulse rounded" />
+                      <div className="bg-loading h-6 w-14 animate-pulse rounded-full" />
+                    </div>
+
+                    <div className="bg-loading mt-2 h-3 w-full animate-pulse rounded" />
+                  </div>
+                ))}
+              </div>
+            ) : versionReviews.length === 0 ? (
               <p className="text-subtext text-sm">No review yet</p>
             ) : (
               versionReviews.map((r) => (

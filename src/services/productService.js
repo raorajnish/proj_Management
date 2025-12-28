@@ -1,10 +1,10 @@
-import projects from "../data/projects.json";
+import projects from "../data/products.json";
 
-export function getProjects() {
+export function getProducts() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (!projects) reject("Projects not found");
-      resolve(projects);
+      if (!products) reject("Products not found");
+      resolve(products);
     }, 400);
   });
 }

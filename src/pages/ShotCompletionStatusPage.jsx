@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import products from "../data/products.json";
 import scenes from "../data/scenes.json";
 import shots from "../data/shots.json";
@@ -24,6 +24,12 @@ const ShotCompletionStatusPage = () => {
   /* ---------- Filters ---------- */
   const [search, setSearch] = useState("");
   const [status, setStatus] = useState("All");
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const t = setTimeout(() => setLoading(false), 1000);
+    return () => clearTimeout(t);
+  }, []);
 
   const filteredShots = sceneShots.filter((shot) => {
     const matchSearch = shot.name.toLowerCase().includes(search.toLowerCase());
@@ -63,26 +69,43 @@ const ShotCompletionStatusPage = () => {
 
       {/* Summary Cards */}
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-        <StatCard
-          label="Accepted"
-          value={accepted}
-          icon={<CheckCircle className="text-green-500" />}
-        />
-        <StatCard
-          label="Partial"
-          value={partial}
-          icon={<AlertCircle className="text-amber-500" />}
-        />
-        <StatCard
-          label="Rejected"
-          value={rejected}
-          icon={<XCircle className="text-red-500" />}
-        />
-        <StatCard
-          label="Not Given"
-          value={notGiven}
-          icon={<Clock className="text-slate-400" />}
-        />
+        {loading ? (
+          Array.from({ length: 4 }).map((_, i) => (
+            <div
+              key={i}
+              className="border-border bg-bg-light flex animate-pulse items-center justify-between rounded-xl border p-4"
+            >
+              <div>
+                <div className="bg-loading mb-2 h-3 w-24 rounded" />
+                <div className="bg-loading h-7 w-16 rounded" />
+              </div>
+              <div className="bg-loading h-9 w-9 rounded-lg" />
+            </div>
+          ))
+        ) : (
+          <>
+            <StatCard
+              label="Accepted"
+              value={accepted}
+              icon={<CheckCircle className="text-green-500" />}
+            />
+            <StatCard
+              label="Partial"
+              value={partial}
+              icon={<AlertCircle className="text-amber-500" />}
+            />
+            <StatCard
+              label="Rejected"
+              value={rejected}
+              icon={<XCircle className="text-red-500" />}
+            />
+            <StatCard
+              label="Not Given"
+              value={notGiven}
+              icon={<Clock className="text-slate-400" />}
+            />
+          </>
+        )}
       </div>
 
       {/* Search + Filter */}
@@ -125,44 +148,64 @@ const ShotCompletionStatusPage = () => {
           </thead>
 
           <tbody>
-            {filteredShots.map((shot) => {
-              const color = getProgressColor(
-                shot.approval === "Accepted"
-                  ? 100
-                  : shot.approval === "Partial"
-                    ? 60
-                    : shot.approval === "Rejected"
-                      ? 20
-                      : 0,
-              );
-
-              return (
-                <tr
-                  key={shot.id}
-                  className="border-border hover:bg-bg-light/60 border-t transition"
-                >
-                  <td className="p-3 font-medium">{shot.name}</td>
-
+            {loading ? (
+              Array.from({ length: 6 }).map((_, i) => (
+                <tr key={i} className="border-border border-t">
                   <td className="p-3">
-                    <span
-                      className="rounded-full px-2.5 py-1 text-xs font-bold"
-                      style={{ background: color }}
-                    >
-                      {shot.approval || "Not Given"}
-                    </span>
+                    <div className="bg-loading h-4 w-48 animate-pulse rounded" />
                   </td>
-
-                  <td className="text-subtext p-3">{shot.assignedTo || "—"}</td>
+                  <td className="p-3">
+                    <div className="bg-loading h-4 w-20 animate-pulse rounded" />
+                  </td>
+                  <td className="p-3">
+                    <div className="bg-loading h-4 w-24 animate-pulse rounded" />
+                  </td>
                 </tr>
-              );
-            })}
+              ))
+            ) : (
+              <>
+                {filteredShots.map((shot) => {
+                  const color = getProgressColor(
+                    shot.approval === "Accepted"
+                      ? 100
+                      : shot.approval === "Partial"
+                        ? 60
+                        : shot.approval === "Rejected"
+                          ? 20
+                          : 0,
+                  );
 
-            {filteredShots.length === 0 && (
-              <tr>
-                <td colSpan="3" className="text-subtext p-6 text-center">
-                  No shots found
-                </td>
-              </tr>
+                  return (
+                    <tr
+                      key={shot.id}
+                      className="border-border hover:bg-bg-light/60 border-t transition"
+                    >
+                      <td className="p-3 font-medium">{shot.name}</td>
+
+                      <td className="p-3">
+                        <span
+                          className="rounded-full px-2.5 py-1 text-xs font-bold"
+                          style={{ background: color }}
+                        >
+                          {shot.approval || "Not Given"}
+                        </span>
+                      </td>
+
+                      <td className="text-subtext p-3">
+                        {shot.assignedTo || "—"}
+                      </td>
+                    </tr>
+                  );
+                })}
+
+                {filteredShots.length === 0 && (
+                  <tr>
+                    <td colSpan="3" className="text-subtext p-6 text-center">
+                      No shots found
+                    </td>
+                  </tr>
+                )}
+              </>
             )}
           </tbody>
         </table>
