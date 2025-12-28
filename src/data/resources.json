@@ -1,0 +1,16 @@
+[
+  {
+    "id": "res1",
+    "level": "project",
+    "levelId": "p1",
+    "name": "Script.pdf",
+    "type": "pdf"
+  },
+  {
+    "id": "res2",
+    "level": "scene",
+    "levelId": "s1",
+    "name": "Storyboard.png",
+    "type": "image"
+  }
+]

@@ -1,0 +1,11 @@
+[
+  { "id": "s1", "projectId": "p1", "name": "Opening Scene" },
+  { "id": "s2", "projectId": "p1", "name": "Hero Entry" },
+  { "id": "s3", "projectId": "p1", "name": "Climax" },
+
+  { "id": "s4", "projectId": "p2", "name": "Product Reveal" },
+  { "id": "s5", "projectId": "p2", "name": "Lifestyle Shots" },
+
+  { "id": "s6", "projectId": "p3", "name": "Intro Cutscene" },
+  { "id": "s7", "projectId": "p3", "name": "Boss Fight" }
+]

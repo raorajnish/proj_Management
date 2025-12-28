@@ -1,0 +1,58 @@
+[
+  {
+    "id": "p1",
+    "name": "Cinematic AI Trailer",
+    "description": "AI-generated cinematic trailer with stylized shots",
+    "tags": ["AI", "Cinematic", "Trailer"],
+    "assignedPeople": ["Aarav", "Neha"],
+    "progress": 62
+  },
+  {
+    "id": "p2",
+    "name": "Product Launch Visuals",
+    "description": "High-quality visuals for product launch",
+    "tags": ["Product", "Marketing"],
+    "assignedPeople": ["Rohan", "Meera"],
+    "progress": 85
+  },
+  {
+    "id": "p3",
+    "name": "Game Cutscene Pack",
+    "description": "Narrative cutscenes for indie game",
+    "tags": ["Game", "Cutscene"],
+    "assignedPeople": ["Kabir"],
+    "progress": 40
+  },
+  {
+    "id": "p4",
+    "name": "Fashion Promo AI",
+    "description": "AI fashion visuals",
+    "tags": ["Fashion", "AI"],
+    "assignedPeople": ["Ananya"],
+    "progress": 78
+  },
+  {
+    "id": "p5",
+    "name": "Documentary Frames",
+    "description": "AI-assisted documentary visuals",
+    "tags": ["Documentary"],
+    "assignedPeople": ["Sahil"],
+    "progress": 55
+  },
+  {
+    "id": "p6",
+    "name": "Short Film Concept",
+    "description": "Concept frames for short film",
+    "tags": ["Film"],
+    "assignedPeople": ["Neha"],
+    "progress": 30
+  },
+  {
+    "id": "p7",
+    "name": "Ad Film Shots",
+    "description": "Commercial ad film visuals",
+    "tags": ["Advertising"],
+    "assignedPeople": ["Aarav"],
+    "progress": 92
+  }
+]

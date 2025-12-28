@@ -1,0 +1,23 @@
+[
+  {
+    "id": "sh1",
+    "sceneId": "s1",
+    "name": "Wide Establishing",
+    "approval": "Partial",
+    "assignedTo": "Aarav"
+  },
+  {
+    "id": "sh2",
+    "sceneId": "s1",
+    "name": "Close Up",
+    "approval": "Rejected",
+    "assignedTo": "Neha"
+  },
+  {
+    "id": "sh3",
+    "sceneId": "s2",
+    "name": "Slow Motion Entry",
+    "approval": "Accepted",
+    "assignedTo": "Aarav"
+  }
+]

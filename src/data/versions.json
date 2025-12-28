@@ -1,0 +1,16 @@
+[
+  {
+    "id": "v1",
+    "shotId": "sh1",
+    "label": "Shot_1.1",
+    "image": "/mock/shot1_v1.png",
+    "createdAt": "2025-01-01"
+  },
+  {
+    "id": "v2",
+    "shotId": "sh1",
+    "label": "Shot_1.2",
+    "image": "/mock/shot1_v2.png",
+    "createdAt": "2025-01-02"
+  }
+]
